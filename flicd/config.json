@@ -1,0 +1,28 @@
+{
+  "name": "flicd",
+  "version": "0.1",
+  "slug": "flicd",
+  "description": "Flicd service for intercepting commands from flic buttons.",
+  "url": "https://github.com/Zac300/addon-flicd",
+  "startup": "services",
+  "arch": [
+    "aarch64",
+    "amd64",
+    "armv7",
+    "i386"
+  ],
+  "boot": "auto",
+  "hassio_api": true,
+  "hassio_role": "default",
+  "host_network": "true",
+  "privileged": ["NET_ADMIN"],
+  "ports": {
+    "5551/tcp": 5551
+  },
+  "options": {
+  },
+  "schema": {
+    "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)?",
+  },
+  "image": "bowl300/flicd-{arch}"
+}
